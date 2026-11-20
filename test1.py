@@ -8,8 +8,8 @@ class Player:
         self.credits = credits          # price in the fantasy game
 
 # object
-babar      =  Player("P089", "Babar Azam", "BAT", "Peshawer Zalmi", 10.5)
-mendis     =  Player("P086", "BKG Mendis", "WK", "Peshawer Zalmi", 8.0)
+babar      =  Player("P089", "Babar Azam", "BAT", "Peshawar Zalmi", 10.5)
+mendis     =  Player("P086", "BKG Mendis", "WK", "Peshawar Zalmi", 8.0)
 roy        =  Player("P038", "JJ Roy", "BAT", "Karachi Kings", 9.0)
 harper     =  Player("P109", "SB Harper", "BAT", "Quetta Gladiators", 7.5)
 shadab     =  Player("P029", "Shadab Khan", "AR", "Islamabad United", 10.5)

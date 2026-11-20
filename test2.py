@@ -12,8 +12,8 @@ class Player:
 
 
 # object
-babar      =  Player("P089","Babar Azam", "Peshawer Zalmi","BAT", 10.5)
-mendis     =  Player("P086", "BKG Mendis", "Peshawer Zalmi", "WK", 8.0)
+babar      =  Player("P089","Babar Azam", "Peshawar Zalmi","BAT", 10.5)
+mendis     =  Player("P086", "BKG Mendis", "Peshawar Zalmi", "WK", 8.0)
 roy        =  Player("P038", "JJ Roy", "Karachi Kings", "BAT", 9.0)
 harper     =  Player("P109", "SB Harper", "Quetta Gladiators", "BAT", 7.5)
 shadab     =  Player("P029", "Shadab Khan", "Islamabad United", "AR", 10.5)

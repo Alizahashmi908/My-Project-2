@@ -33,26 +33,25 @@ class FantasyTeam :
 
 
     def count_by_role(self):
-        count = {"WK": 0, "BAT": 0, "AR": 0, "BOWL": 0,}
+        counts = {"WK": 0, "BAT": 0, "AR": 0, "BOWL": 0,}
         for player in self.players :
-            count[player.role] = count[player.role] + 1
-        return count
+            counts[player.role] = counts[player.role] + 1
+        return counts
     
-    
-    def set_captian(self, captain, vice_captain) :
+    def set_captain(self, captain, vice_captain) :
         self.captain = captain
         self.vice_captain =  vice_captain  
         
-
+    
     def __str__(self) :
-        size = len(self.player)
+        size = len(self.players)
         cost = self.total_credits()
         return f"{self.team_name} (owner : {self.owner}, {size} players, {cost} cr)"
  
 
 team       =  FantasyTeam   ("Star Fighters", "Aliza")
-babar      =  Player("P089", "Babar Azam", "Peshawer Zalmi", "BAT", 10.5)
-mendis     =  Player("P086", "BKG Mendis", "Peshawer Zalmi", "WK", 8.0)
+babar      =  Player("P089", "Babar Azam", "Peshawar Zalmi", "BAT", 10.5)
+mendis     =  Player("P086", "BKG Mendis", "Peshawar Zalmi", "WK", 8.0)
 roy        =  Player("P038", "JJ Roy", "Karachi Kings", "BAT", 9.0)
 harper     =  Player("P109", "SB Harper", "Quetta Gladiators", "BAT", 7.5)
 shadab     =  Player("P029", "Shadab Khan", "Islamabad United", "AR", 10.5)
@@ -71,5 +70,6 @@ team.set_captain(babar, shadab)
 print(team)
 print("Roles:", team.count_by_role())
 print("Captain:", team.captain)
+print("Vice-captain:", team.vice_captain)
 
    
