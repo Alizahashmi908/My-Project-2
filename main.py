@@ -26,7 +26,14 @@ class FantasyTeam :
         total = 0
         for player in self.players :
             total = total + player.credits
-        return total                
+        return total
+
+
+    def count_by_role(self):
+        count = {"WK": 0, "BAT": 0, "AR": 0, "BOWL": 0,}
+        for player in self.players :
+            count[player.role] = count[player.role] + 1
+        return count                
 
 
     def __str__(self):
@@ -42,4 +49,4 @@ shadab     =  Player("P029", "Shadab Khan", "Islamabad United", "AR", 10.5)
 
 for player in [babar, mendis, roy, harper, shadab]:
  print(player)
-    
+   
