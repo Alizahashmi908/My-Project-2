@@ -17,9 +17,9 @@ class FantasyTeam :
     def  __init__(self, team_name, owner) :
         self.team_name = team_name
         self.owner = owner
-        self.player = None
+        self.players = []
         self.captain = None
-        self.vise_captain = None
+        self.vice_captain = None
 
     
     def add_player(self, player) :
@@ -47,15 +47,29 @@ class FantasyTeam :
     def __str__(self) :
         size = len(self.player)
         cost = self.total_credits()
-        return f"{self.team_name} (owner : {self.owner}, {size} players, {cost} cr)" 
+        return f"{self.team_name} (owner : {self.owner}, {size} players, {cost} cr)"
+ 
 
-# object
+team       =  FantasyTeam   ("Star Fighters", "Aliza")
 babar      =  Player("P089", "Babar Azam", "Peshawer Zalmi", "BAT", 10.5)
 mendis     =  Player("P086", "BKG Mendis", "Peshawer Zalmi", "WK", 8.0)
 roy        =  Player("P038", "JJ Roy", "Karachi Kings", "BAT", 9.0)
 harper     =  Player("P109", "SB Harper", "Quetta Gladiators", "BAT", 7.5)
 shadab     =  Player("P029", "Shadab Khan", "Islamabad United", "AR", 10.5)
+saim       =  Player("P012", "Saim Ayub", "Hydrabad Kingsmen", "AR",  10.5)
+ali        =  Player("P043", "M M Ali",  "Karachi Kings","AR",  7.5)
+salman     =  Player("P034", "Salman Mirza",  "Islamabad United", "BOWL", 10.5)
+ahmad      =  Player("P115", "Ahamad Daniyal", "Quetta Gladiators", "BOWL", 10)
+zahid      =  Player("P052", "Zahid Mahmood",  "Karachi Kings", "BOWL",  8.5)
+ubaid      =  Player("P069", "Ubaid Shah",  "Lahore Qalandars","BOWL",  7.0)      
 
-for player in [babar, mendis, roy, harper, shadab]:
- print(player)
+
+for player in [babar, mendis, roy, harper, shadab, saim, ali, salman, ahmad, zahid, ubaid]:
+    team.add_player(player)
+team.set_captain(babar, shadab)
+
+print(team)
+print("Roles:", team.count_by_role())
+print("Captain:", team.captain)
+
    
