@@ -1,7 +1,7 @@
 class Player:
     """one real cricketer in psl player list ."""
 
-    def __init__(self,player_id, name, role, franchise, credits):
+    def __init__(self,player_id, name,  franchise, role, credits):
         self.player_id = player_id
         self.name = name
         self.franchise = franchise

@@ -1,11 +1,12 @@
 class Player:
     # constructor
-    def __init__(self,player_id, name, role, franchise, credits):
+    def __init__(self,player_id, name, franchise, role, credits):
         self.player_id = player_id
         self.name = name
-        self.role = role                # WK, BAT, AR, or BOWL
         self.franchise = franchise
+        self.role = role                # WK, BAT, AR, or BOWL
         self.credits = credits          # price in the fantasy game
+
 
 # object
 babar      =  Player("P089", "Babar Azam", "BAT", "Peshawar Zalmi", 10.5)
