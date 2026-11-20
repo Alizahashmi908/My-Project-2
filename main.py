@@ -24,7 +24,7 @@ class FantasyTeam :
 
     def total_credits(self) :
         total = 0
-        for player in self.player :
+        for player in self.players :
             total = total + player.credits
         return total                
 
